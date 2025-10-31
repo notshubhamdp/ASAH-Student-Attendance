@@ -28,12 +28,15 @@
                 </tr>
             </thead>
             <tbody>
-                <tr th:each="record : ${attendanceRecords}"
-                    th:classappend="${record.status?.name() == 'PRESENT'} ? 'present' : (${record.status?.name() == 'ABSENT'} ? 'absent' : 'late')">
-                    <td th:text="${record.attendanceDate}"></td>
-                    <td th:text="${record.classEntity.courseName}"></td>
-                    <td th:text="${record.status?.name() == 'PRESENT' ? 'Present' : (record.status?.name() == 'ABSENT' ? 'Absent' : 'Late')}"></td>
-                </tr>
+                    <tr th:each="record : ${attendanceRecords}"
+                        th:classappend="${record.status.name() == 'PRESENT'} ? 'present' : (${record.status.name() == 'ABSENT'} ? 'absent' : 'late')">
+                        <td th:text="${#temporals.format(record.attendanceDate, 'dd-MM-yyyy')}"></td>
+                        <td th:text="${record.course.courseName}"></td>
+                        <td th:text="${record.status.name() == 'PRESENT' ? 'Present' : (record.status.name() == 'ABSENT' ? 'Absent' : 'Late')}"></td>
+                    </tr>
+                    <tr th:if="${#lists.isEmpty(attendanceRecords)}">
+                        <td colspan="3" style="text-align: center; padding: 20px;">No attendance records found</td>
+                    </tr>
             </tbody>
         </table>
         <a href="/student_dashboard" style="color:#38bdf8;text-decoration:none;font-weight:500;">Back to Dashboard</a>

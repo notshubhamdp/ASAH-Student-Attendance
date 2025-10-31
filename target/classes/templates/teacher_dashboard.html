@@ -162,27 +162,19 @@
             </thead>
             <tbody>
             <tr th:each="student : ${students}">
-                <form th:action="@{/attendance/mark}" method="post" th:id="'attendanceForm_' + ${student.userId}" th:onsubmit="'return handleAttendanceSubmit(event, ' + ${student.userId} + ');'">
+                <form th:action="@{/attendance/mark}" method="post" th:id="'attendanceForm_' + ${student.userId}" style="margin:0">
                     <td th:text="${student.firstName + ' ' + student.lastName}"></td>
                     <td th:text="${student.rollNo}"></td>
                     <td th:text="${student.department}"></td>
                     <td>
-                        <select name="courseId" required>
+                        <select name="courseId" required style="width:100%;padding:8px;border-radius:6px;border:1px solid #cbd5e1;">
                             <option value="" disabled selected>Select Course</option>
-                            <th:block th:if="${#lists.isEmpty(courses)}">
-                                <!-- Fallback options when server didn't provide courses -->
-                                <option value="OSY" th:value="'OSY'" th:text="'OSY'"></option>
-                                <option value="SEN" th:value="'SEN'" th:text="'SEN'"></option>
-                                <option value="DAN" th:value="'DAN'" th:text="'DAN'"></option>
-                                <option value="ENDS" th:value="'ENDS'" th:text="'ENDS'"></option>
-                            </th:block>
                             <option th:each="course : ${courses}" th:value="${course.courseId}" th:text="${course.courseName}"></option>
                         </select>
                     </td>
                     <td>
-                        <select name="status" required>
+                        <select name="status" required style="width:100%;padding:8px;border-radius:6px;border:1px solid #cbd5e1;">
                             <option value="" disabled selected>Select Status</option>
-                            <!-- Use enum names so backend AttendanceStatus.valueOf(...) works reliably -->
                             <option value="PRESENT">Present</option>
                             <option value="ABSENT">Absent</option>
                             <option value="LATE">Late</option>
@@ -190,7 +182,7 @@
                     </td>
                     <td>
                         <input type="hidden" name="userId" th:value="${student.userId}" />
-                        <button type="submit" class="btn">Mark</button>
+                        <button type="submit" class="btn" style="width:100%;margin:0;padding:8px 16px;">Mark</button>
                     </td>
                 </form>
             </tr>
@@ -200,18 +192,35 @@
             function handleAttendanceSubmit(event, userId) {
                 event.preventDefault();
                 const form = event.target;
+                const formData = new FormData(form);
+                
+                // Log form data for debugging
+                console.log('Form data being sent:', {
+                    userId: formData.get('userId'),
+                    courseId: formData.get('courseId'),
+                    status: formData.get('status')
+                });
+
                 fetch(form.action, {
                     method: 'POST',
-                    body: new FormData(form)
+                    body: formData,
+                    credentials: 'same-origin'  // Include session cookies
                 })
                 .then(response => {
-                    if (response.ok) {
-                        window.location.href = '/reports';
-                    } else {
-                        alert('Attendance marking failed.');
+                    if (!response.ok) {
+                        // Log the error details
+                        response.text().then(text => {
+                            console.error('Server response:', text);
+                            alert('Attendance marking failed. Check browser console for details.');
+                        });
+                        throw new Error('Network response was not ok');
                     }
+                    window.location.href = '/reports';
                 })
-                .catch(() => alert('Attendance marking failed.'));
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Attendance marking failed. Check browser console for details.');
+                });
                 return false;
             }
         </script>

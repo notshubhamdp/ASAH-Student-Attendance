@@ -1938,3 +1938,565 @@ This generated password is for development use only. Your security configuration
 2025-10-31T23:06:35.119+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
 2025-10-31T23:06:36.216+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
 2025-10-31T23:06:42.504+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:08:01.791+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-4] c.A.S.r.TeacherDashboardController       : Teacher dashboard endpoint triggered
+2025-10-31T23:08:01.825+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-4] c.A.S.r.TeacherDashboardController       : Teacher dashboard department from session: computer
+2025-10-31T23:08:02.508+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-4] c.A.S.r.TeacherDashboardController       : Pending students found: 0
+2025-10-31T23:08:02.784+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-4] c.A.S.r.TeacherDashboardController       : Approved students found: 1
+2025-10-31T23:08:03.082+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-4] c.A.S.r.TeacherDashboardController       : Rejected students found: 0
+2025-10-31T23:08:04.310+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/teacher_dashboard.js.]
+2025-10-31T23:08:04.522+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:08:05.843+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-10-31T23:08:12.974+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:08:31.408+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-4] c.A.S.r.TeacherDashboardController       : Teacher dashboard endpoint triggered
+2025-10-31T23:08:31.421+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-4] c.A.S.r.TeacherDashboardController       : Teacher dashboard department from session: computer
+2025-10-31T23:08:31.958+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-4] c.A.S.r.TeacherDashboardController       : Pending students found: 0
+2025-10-31T23:08:32.302+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-4] c.A.S.r.TeacherDashboardController       : Approved students found: 1
+2025-10-31T23:08:32.564+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-4] c.A.S.r.TeacherDashboardController       : Rejected students found: 0
+2025-10-31T23:08:33.527+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/teacher_dashboard.js.]
+2025-10-31T23:08:33.725+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:08:35.000+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-10-31T23:08:39.906+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:08:45.168+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-4] c.A.S.r.TeacherDashboardController       : Teacher dashboard endpoint triggered
+2025-10-31T23:08:45.175+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-4] c.A.S.r.TeacherDashboardController       : Teacher dashboard department from session: computer
+2025-10-31T23:08:45.743+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-4] c.A.S.r.TeacherDashboardController       : Pending students found: 0
+2025-10-31T23:08:46.004+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-4] c.A.S.r.TeacherDashboardController       : Approved students found: 1
+2025-10-31T23:08:46.261+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-4] c.A.S.r.TeacherDashboardController       : Rejected students found: 0
+2025-10-31T23:08:47.146+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/teacher_dashboard.js.]
+2025-10-31T23:08:47.256+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:08:48.475+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-10-31T23:08:59.307+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:09:01.054+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-7] c.A.S.r.TeacherDashboardController       : Teacher dashboard endpoint triggered
+2025-10-31T23:09:01.069+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-7] c.A.S.r.TeacherDashboardController       : Teacher dashboard department from session: computer
+2025-10-31T23:09:01.627+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-7] c.A.S.r.TeacherDashboardController       : Pending students found: 0
+2025-10-31T23:09:01.891+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-7] c.A.S.r.TeacherDashboardController       : Approved students found: 1
+2025-10-31T23:09:02.235+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-7] c.A.S.r.TeacherDashboardController       : Rejected students found: 0
+2025-10-31T23:09:03.184+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/teacher_dashboard.js.]
+2025-10-31T23:09:03.296+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:09:04.320+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-10-31T23:14:36.267+05:30  INFO 23644 --- [Student-Attendance] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-31T23:14:36.299+05:30  INFO 23644 --- [Student-Attendance] [Thread-5] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T23:14:36.820+05:30  INFO 23644 --- [Student-Attendance] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T23:14:36.833+05:30  INFO 23644 --- [Student-Attendance] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T23:14:36.852+05:30  INFO 23644 --- [Student-Attendance] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-31T23:14:39.325+05:30  INFO 23644 --- [Student-Attendance] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-31T23:14:39.714+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : Starting StudentAttendanceApplication using Java 17.0.16 with PID 23644 (C:\Users\Shubham Patil\OneDrive\Desktop\ENDS\MS-Gosavi\target\classes started by Shubham Patil in c:\Users\Shubham Patil\OneDrive\Desktop\ENDS\MS-Gosavi)
+2025-10-31T23:14:39.720+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : The following 1 profile is active: "dev"
+2025-10-31T23:14:41.538+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T23:14:41.817+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 244 ms. Found 6 JPA repository interfaces.
+2025-10-31T23:14:43.847+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-10-31T23:14:43.902+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T23:14:43.918+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-10-31T23:14:44.255+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-31T23:14:44.262+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4511 ms
+2025-10-31T23:14:44.615+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T23:14:44.796+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T23:14:45.213+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T23:14:45.250+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-10-31T23:14:47.494+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@5609dde3
+2025-10-31T23:14:47.495+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-10-31T23:14:48.748+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T23:14:49.547+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T23:14:58.158+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T23:15:00.968+05:30  WARN 23644 --- [Student-Attendance] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T23:15:00.985+05:30  WARN 23644 --- [Student-Attendance] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 18a3f0fe-3d7d-4397-88ac-5490da47ab7e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-31T23:15:00.998+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-31T23:15:01.510+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T23:15:01.577+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-10-31T23:15:01.589+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : Started StudentAttendanceApplication in 22.078 seconds (process running for 717.415)
+2025-10-31T23:15:01.615+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T23:15:12.287+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-31T23:15:12.289+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-31T23:15:12.318+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 24 ms
+2025-10-31T23:15:12.335+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Teacher dashboard endpoint triggered
+2025-10-31T23:15:12.335+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Teacher dashboard department from session: computer
+2025-10-31T23:15:12.855+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Pending students found: 0
+2025-10-31T23:15:13.120+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Approved students found: 1
+2025-10-31T23:15:13.375+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Rejected students found: 0
+2025-10-31T23:15:14.583+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/teacher_dashboard.js.]
+2025-10-31T23:15:15.021+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:15:15.885+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-10-31T23:15:22.190+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:15:24.672+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Teacher dashboard endpoint triggered
+2025-10-31T23:15:24.716+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Teacher dashboard department from session: computer
+2025-10-31T23:15:25.245+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Pending students found: 0
+2025-10-31T23:15:25.504+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Approved students found: 1
+2025-10-31T23:15:25.785+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Rejected students found: 0
+2025-10-31T23:15:26.737+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/teacher_dashboard.js.]
+2025-10-31T23:15:26.963+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:15:28.258+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-10-31T23:15:40.144+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:15:49.480+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-2] c.A.S.r.TeacherDashboardController       : Teacher dashboard endpoint triggered
+2025-10-31T23:15:49.484+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-2] c.A.S.r.TeacherDashboardController       : Teacher dashboard department from session: computer
+2025-10-31T23:15:49.985+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-2] c.A.S.r.TeacherDashboardController       : Pending students found: 0
+2025-10-31T23:15:50.244+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-2] c.A.S.r.TeacherDashboardController       : Approved students found: 1
+2025-10-31T23:15:50.499+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-2] c.A.S.r.TeacherDashboardController       : Rejected students found: 0
+2025-10-31T23:15:51.398+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/teacher_dashboard.js.]
+2025-10-31T23:15:51.587+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:15:52.790+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-10-31T23:16:00.236+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:18:15.577+05:30  INFO 23644 --- [Student-Attendance] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-31T23:18:15.592+05:30  INFO 23644 --- [Student-Attendance] [Thread-7] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T23:18:16.367+05:30  INFO 23644 --- [Student-Attendance] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T23:18:16.387+05:30  INFO 23644 --- [Student-Attendance] [Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T23:18:16.398+05:30  INFO 23644 --- [Student-Attendance] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-10-31T23:18:18.857+05:30  INFO 23644 --- [Student-Attendance] [Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-10-31T23:18:19.540+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : Starting StudentAttendanceApplication using Java 17.0.16 with PID 23644 (C:\Users\Shubham Patil\OneDrive\Desktop\ENDS\MS-Gosavi\target\classes started by Shubham Patil in c:\Users\Shubham Patil\OneDrive\Desktop\ENDS\MS-Gosavi)
+2025-10-31T23:18:19.571+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : The following 1 profile is active: "dev"
+2025-10-31T23:18:25.175+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T23:18:26.209+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 972 ms. Found 6 JPA repository interfaces.
+2025-10-31T23:18:27.801+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-10-31T23:18:27.809+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T23:18:27.815+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-10-31T23:18:28.289+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-31T23:18:28.295+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8568 ms
+2025-10-31T23:18:28.559+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T23:18:28.590+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T23:18:28.979+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T23:18:29.003+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-10-31T23:18:31.209+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@197dbe89
+2025-10-31T23:18:31.210+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-10-31T23:18:32.463+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T23:18:34.903+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T23:18:43.459+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T23:18:47.587+05:30  WARN 23644 --- [Student-Attendance] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T23:18:47.669+05:30  WARN 23644 --- [Student-Attendance] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 02697419-39b2-4f74-aa90-54f5469c6e2f
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-31T23:18:47.696+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-31T23:18:49.504+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T23:18:49.557+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-10-31T23:18:49.573+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : Started StudentAttendanceApplication in 30.545 seconds (process running for 945.397)
+2025-10-31T23:18:49.577+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T23:18:51.136+05:30  INFO 23644 --- [Student-Attendance] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2025-10-31T23:18:51.142+05:30  INFO 23644 --- [Student-Attendance] [Thread-11] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T23:18:51.696+05:30  INFO 23644 --- [Student-Attendance] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T23:18:51.704+05:30  INFO 23644 --- [Student-Attendance] [Thread-11] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T23:18:51.708+05:30  INFO 23644 --- [Student-Attendance] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-10-31T23:18:54.150+05:30  INFO 23644 --- [Student-Attendance] [Thread-11] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-10-31T23:18:54.596+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : Starting StudentAttendanceApplication using Java 17.0.16 with PID 23644 (C:\Users\Shubham Patil\OneDrive\Desktop\ENDS\MS-Gosavi\target\classes started by Shubham Patil in c:\Users\Shubham Patil\OneDrive\Desktop\ENDS\MS-Gosavi)
+2025-10-31T23:18:54.611+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : The following 1 profile is active: "dev"
+2025-10-31T23:18:56.183+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T23:18:56.267+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 6 JPA repository interfaces.
+2025-10-31T23:18:56.941+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-10-31T23:18:56.943+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T23:18:56.944+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-10-31T23:18:57.074+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-31T23:18:57.075+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2448 ms
+2025-10-31T23:18:57.477+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T23:18:57.496+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T23:18:57.550+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T23:18:57.563+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-10-31T23:18:59.633+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@49e4e6d0
+2025-10-31T23:18:59.634+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-10-31T23:19:00.889+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T23:19:01.237+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T23:19:09.843+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T23:19:14.443+05:30  WARN 23644 --- [Student-Attendance] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T23:19:14.551+05:30  WARN 23644 --- [Student-Attendance] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 4b55cfec-5a31-4bca-9434-8ee88bfa35b1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-31T23:19:14.554+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-31T23:19:15.802+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T23:19:15.887+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-10-31T23:19:15.927+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : Started StudentAttendanceApplication in 21.561 seconds (process running for 971.752)
+2025-10-31T23:19:15.937+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T23:19:15.969+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-31T23:19:15.970+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-31T23:19:15.977+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-31T23:19:32.570+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:19:40.805+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-3] c.A.S.r.TeacherDashboardController       : Teacher dashboard endpoint triggered
+2025-10-31T23:19:40.809+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-3] c.A.S.r.TeacherDashboardController       : Teacher dashboard department from session: computer
+2025-10-31T23:19:41.324+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-3] c.A.S.r.TeacherDashboardController       : Pending students found: 0
+2025-10-31T23:19:41.578+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-3] c.A.S.r.TeacherDashboardController       : Approved students found: 1
+2025-10-31T23:19:41.830+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-3] c.A.S.r.TeacherDashboardController       : Rejected students found: 0
+2025-10-31T23:19:43.076+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/teacher_dashboard.js.]
+2025-10-31T23:19:43.228+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:19:44.575+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-10-31T23:19:49.120+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:20:01.778+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/teacher_dashboard.js.]
+2025-10-31T23:20:01.896+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:20:02.939+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-10-31T23:20:05.903+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:20:07.329+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-3] c.A.S.r.TeacherDashboardController       : Teacher dashboard endpoint triggered
+2025-10-31T23:20:07.330+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-3] c.A.S.r.TeacherDashboardController       : Teacher dashboard department from session: computer
+2025-10-31T23:20:07.881+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-3] c.A.S.r.TeacherDashboardController       : Pending students found: 0
+2025-10-31T23:20:08.133+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-3] c.A.S.r.TeacherDashboardController       : Approved students found: 1
+2025-10-31T23:20:08.385+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-3] c.A.S.r.TeacherDashboardController       : Rejected students found: 0
+2025-10-31T23:20:09.227+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/teacher_dashboard.js.]
+2025-10-31T23:20:09.394+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:20:10.554+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-10-31T23:20:14.646+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:34:18.499+05:30  INFO 23644 --- [Student-Attendance] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-31T23:34:18.555+05:30  INFO 23644 --- [Student-Attendance] [Thread-15] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T23:34:19.093+05:30  INFO 23644 --- [Student-Attendance] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T23:34:19.098+05:30  INFO 23644 --- [Student-Attendance] [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T23:34:19.101+05:30  INFO 23644 --- [Student-Attendance] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-10-31T23:34:21.530+05:30  INFO 23644 --- [Student-Attendance] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-10-31T23:34:21.795+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : Starting StudentAttendanceApplication using Java 17.0.16 with PID 23644 (C:\Users\Shubham Patil\OneDrive\Desktop\ENDS\MS-Gosavi\target\classes started by Shubham Patil in c:\Users\Shubham Patil\OneDrive\Desktop\ENDS\MS-Gosavi)
+2025-10-31T23:34:21.796+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : The following 1 profile is active: "dev"
+2025-10-31T23:34:23.041+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T23:34:23.154+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 6 JPA repository interfaces.
+2025-10-31T23:34:23.622+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-10-31T23:34:23.630+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T23:34:23.632+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-10-31T23:34:23.728+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-31T23:34:23.729+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1928 ms
+2025-10-31T23:34:23.850+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T23:34:23.864+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T23:34:23.899+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T23:34:23.902+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-10-31T23:34:26.063+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@67e8cb8b
+2025-10-31T23:34:26.064+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2025-10-31T23:34:27.326+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T23:34:27.580+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T23:34:36.153+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T23:34:38.810+05:30  WARN 23644 --- [Student-Attendance] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T23:34:38.831+05:30  WARN 23644 --- [Student-Attendance] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 19c7e9af-891a-4941-95dc-069d7671d364
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-31T23:34:38.833+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-31T23:34:39.262+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T23:34:39.282+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-10-31T23:34:39.289+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : Started StudentAttendanceApplication in 17.592 seconds (process running for 1895.115)
+2025-10-31T23:34:39.299+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T23:35:07.707+05:30  INFO 23644 --- [Student-Attendance] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+2025-10-31T23:35:07.718+05:30  INFO 23644 --- [Student-Attendance] [Thread-19] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T23:35:08.106+05:30  INFO 23644 --- [Student-Attendance] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T23:35:08.113+05:30  INFO 23644 --- [Student-Attendance] [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T23:35:08.114+05:30  INFO 23644 --- [Student-Attendance] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2025-10-31T23:35:10.528+05:30  INFO 23644 --- [Student-Attendance] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2025-10-31T23:35:10.702+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : Starting StudentAttendanceApplication using Java 17.0.16 with PID 23644 (C:\Users\Shubham Patil\OneDrive\Desktop\ENDS\MS-Gosavi\target\classes started by Shubham Patil in c:\Users\Shubham Patil\OneDrive\Desktop\ENDS\MS-Gosavi)
+2025-10-31T23:35:10.703+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : The following 1 profile is active: "dev"
+2025-10-31T23:35:11.588+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T23:35:11.746+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 6 JPA repository interfaces.
+2025-10-31T23:35:12.169+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-10-31T23:35:12.170+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T23:35:12.172+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-10-31T23:35:12.331+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-31T23:35:12.332+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1623 ms
+2025-10-31T23:35:12.445+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T23:35:12.455+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T23:35:12.524+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T23:35:12.532+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2025-10-31T23:35:14.848+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection org.postgresql.jdbc.PgConnection@7926546a
+2025-10-31T23:35:14.848+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2025-10-31T23:35:16.164+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T23:35:16.768+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T23:35:26.028+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T23:35:30.644+05:30  WARN 23644 --- [Student-Attendance] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T23:35:30.691+05:30  WARN 23644 --- [Student-Attendance] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: aa0ce38a-d3f8-45ad-92d1-aecd64345a3e
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-31T23:35:30.699+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-31T23:35:31.396+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T23:35:31.427+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-10-31T23:35:31.434+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : Started StudentAttendanceApplication in 20.788 seconds (process running for 1947.258)
+2025-10-31T23:35:31.438+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T23:35:37.258+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-31T23:35:37.271+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-31T23:35:37.303+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-10-31T23:35:38.162+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/teacher_dashboard.js.]
+2025-10-31T23:35:38.503+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:35:39.326+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-10-31T23:35:42.116+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:35:44.216+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Teacher dashboard endpoint triggered
+2025-10-31T23:35:44.231+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Teacher dashboard department from session: computer
+2025-10-31T23:35:44.768+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Pending students found: 0
+2025-10-31T23:35:45.032+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Approved students found: 1
+2025-10-31T23:35:45.300+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Rejected students found: 0
+2025-10-31T23:35:46.217+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/teacher_dashboard.js.]
+2025-10-31T23:35:46.398+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:35:47.618+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-10-31T23:35:51.575+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [jakarta.servlet.ServletException: Handler dispatch failed: java.lang.Error: Unresolved compilation problem: <EOL>?Syntax error, insert "}" to complete Block<EOL>]
+2025-10-31T23:35:51.840+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:39:24.328+05:30  INFO 23644 --- [Student-Attendance] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-31T23:39:24.643+05:30  INFO 23644 --- [Student-Attendance] [Thread-23] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T23:39:31.056+05:30  INFO 23644 --- [Student-Attendance] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T23:39:31.068+05:30  INFO 23644 --- [Student-Attendance] [Thread-23] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T23:39:31.074+05:30  INFO 23644 --- [Student-Attendance] [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2025-10-31T23:39:33.543+05:30  INFO 23644 --- [Student-Attendance] [Thread-23] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2025-10-31T23:39:33.892+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : Starting StudentAttendanceApplication using Java 17.0.16 with PID 23644 (C:\Users\Shubham Patil\OneDrive\Desktop\ENDS\MS-Gosavi\target\classes started by Shubham Patil in c:\Users\Shubham Patil\OneDrive\Desktop\ENDS\MS-Gosavi)
+2025-10-31T23:39:33.893+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : The following 1 profile is active: "dev"
+2025-10-31T23:39:35.086+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T23:39:35.170+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 79 ms. Found 6 JPA repository interfaces.
+2025-10-31T23:39:35.404+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-10-31T23:39:35.406+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T23:39:35.408+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-10-31T23:39:35.535+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-31T23:39:35.536+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1639 ms
+2025-10-31T23:39:35.631+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T23:39:35.642+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T23:39:35.664+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T23:39:35.672+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2025-10-31T23:39:37.914+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection org.postgresql.jdbc.PgConnection@1a5a19c3
+2025-10-31T23:39:37.926+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2025-10-31T23:39:39.220+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-7)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T23:39:39.454+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T23:39:48.881+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T23:39:51.544+05:30  WARN 23644 --- [Student-Attendance] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T23:39:51.558+05:30  WARN 23644 --- [Student-Attendance] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 3e07c4df-89b4-4cf4-8502-0f28a29c2167
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-31T23:39:51.560+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-31T23:39:51.846+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T23:39:51.857+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-10-31T23:39:51.864+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : Started StudentAttendanceApplication in 18.175 seconds (process running for 2207.688)
+2025-10-31T23:39:51.867+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T23:40:12.525+05:30  INFO 23644 --- [Student-Attendance] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-31T23:40:12.527+05:30  INFO 23644 --- [Student-Attendance] [Thread-27] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T23:40:13.044+05:30  INFO 23644 --- [Student-Attendance] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T23:40:13.051+05:30  INFO 23644 --- [Student-Attendance] [Thread-27] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T23:40:13.062+05:30  INFO 23644 --- [Student-Attendance] [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2025-10-31T23:40:15.498+05:30  INFO 23644 --- [Student-Attendance] [Thread-27] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2025-10-31T23:40:15.798+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : Starting StudentAttendanceApplication using Java 17.0.16 with PID 23644 (C:\Users\Shubham Patil\OneDrive\Desktop\ENDS\MS-Gosavi\target\classes started by Shubham Patil in c:\Users\Shubham Patil\OneDrive\Desktop\ENDS\MS-Gosavi)
+2025-10-31T23:40:15.799+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : The following 1 profile is active: "dev"
+2025-10-31T23:40:17.348+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T23:40:17.647+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 268 ms. Found 6 JPA repository interfaces.
+2025-10-31T23:40:18.030+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-10-31T23:40:18.060+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T23:40:18.092+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-10-31T23:40:18.264+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-31T23:40:18.276+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2467 ms
+2025-10-31T23:40:18.395+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T23:40:18.414+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T23:40:18.465+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T23:40:18.494+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2025-10-31T23:40:20.723+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection org.postgresql.jdbc.PgConnection@7d65321f
+2025-10-31T23:40:20.723+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2025-10-31T23:40:21.998+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-8)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T23:40:22.226+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T23:40:31.190+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T23:40:33.811+05:30  WARN 23644 --- [Student-Attendance] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T23:40:33.841+05:30  WARN 23644 --- [Student-Attendance] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: c7f562ca-a5c4-4c23-bed3-86ba8e34ebb1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-31T23:40:33.848+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-31T23:40:34.209+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T23:40:34.231+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-10-31T23:40:34.244+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : Started StudentAttendanceApplication in 18.597 seconds (process running for 2250.07)
+2025-10-31T23:40:34.247+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T23:40:46.646+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-31T23:40:46.649+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-31T23:40:46.674+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 24 ms
+2025-10-31T23:40:47.159+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:41:00.714+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/teacher_dashboard.js.]
+2025-10-31T23:41:00.875+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:41:01.959+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-10-31T23:41:04.027+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:41:05.661+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-6] c.A.S.r.TeacherDashboardController       : Teacher dashboard endpoint triggered
+2025-10-31T23:41:05.662+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-6] c.A.S.r.TeacherDashboardController       : Teacher dashboard department from session: computer
+2025-10-31T23:41:06.187+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-6] c.A.S.r.TeacherDashboardController       : Pending students found: 0
+2025-10-31T23:41:06.454+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-6] c.A.S.r.TeacherDashboardController       : Approved students found: 1
+2025-10-31T23:41:06.715+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-6] c.A.S.r.TeacherDashboardController       : Rejected students found: 0
+2025-10-31T23:41:07.828+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/teacher_dashboard.js.]
+2025-10-31T23:41:08.142+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:41:09.239+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-10-31T23:41:14.364+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:41:32.523+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/teacher_dashboard.js.]
+2025-10-31T23:41:32.638+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:41:33.600+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-10-31T23:41:35.899+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:41:37.099+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-5] c.A.S.r.TeacherDashboardController       : Teacher dashboard endpoint triggered
+2025-10-31T23:41:37.110+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-5] c.A.S.r.TeacherDashboardController       : Teacher dashboard department from session: computer
+2025-10-31T23:41:37.644+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-5] c.A.S.r.TeacherDashboardController       : Pending students found: 0
+2025-10-31T23:41:37.956+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-5] c.A.S.r.TeacherDashboardController       : Approved students found: 1
+2025-10-31T23:41:38.221+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-5] c.A.S.r.TeacherDashboardController       : Rejected students found: 0
+2025-10-31T23:41:39.183+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/teacher_dashboard.js.]
+2025-10-31T23:41:39.582+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:41:40.690+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-10-31T23:43:04.950+05:30  INFO 23644 --- [Student-Attendance] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-31T23:43:05.234+05:30  INFO 23644 --- [Student-Attendance] [Thread-31] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T23:43:12.087+05:30  INFO 23644 --- [Student-Attendance] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T23:43:12.104+05:30  INFO 23644 --- [Student-Attendance] [Thread-31] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T23:43:12.119+05:30  INFO 23644 --- [Student-Attendance] [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2025-10-31T23:43:14.583+05:30  INFO 23644 --- [Student-Attendance] [Thread-31] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2025-10-31T23:43:15.033+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : Starting StudentAttendanceApplication using Java 17.0.16 with PID 23644 (C:\Users\Shubham Patil\OneDrive\Desktop\ENDS\MS-Gosavi\target\classes started by Shubham Patil in c:\Users\Shubham Patil\OneDrive\Desktop\ENDS\MS-Gosavi)
+2025-10-31T23:43:15.034+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : The following 1 profile is active: "dev"
+2025-10-31T23:43:16.211+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T23:43:16.313+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 6 JPA repository interfaces.
+2025-10-31T23:43:17.044+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-10-31T23:43:17.051+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T23:43:17.056+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-10-31T23:43:17.176+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-31T23:43:17.179+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2129 ms
+2025-10-31T23:43:17.335+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T23:43:17.420+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T23:43:17.503+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T23:43:17.564+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2025-10-31T23:43:19.762+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection org.postgresql.jdbc.PgConnection@3e231861
+2025-10-31T23:43:19.763+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2025-10-31T23:43:21.016+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-9)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T23:43:21.264+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T23:43:29.867+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T23:43:32.632+05:30  WARN 23644 --- [Student-Attendance] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T23:43:32.647+05:30  WARN 23644 --- [Student-Attendance] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6241b2fb-3003-40c2-8c90-3aa4d77bb445
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-31T23:43:32.697+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-31T23:43:33.234+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T23:43:33.282+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-10-31T23:43:33.288+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-31T23:43:33.296+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-31T23:43:33.299+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2025-10-31T23:43:33.300+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : Started StudentAttendanceApplication in 18.518 seconds (process running for 2429.124)
+2025-10-31T23:43:33.309+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Teacher dashboard endpoint triggered
+2025-10-31T23:43:33.308+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T23:43:33.311+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Teacher dashboard department from session: computer
+2025-10-31T23:43:33.820+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Pending students found: 0
+2025-10-31T23:43:34.078+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Approved students found: 1
+2025-10-31T23:43:34.336+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Rejected students found: 0
+2025-10-31T23:43:34.807+05:30  INFO 23644 --- [Student-Attendance] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-10-31T23:43:34.809+05:30  INFO 23644 --- [Student-Attendance] [Thread-35] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-31T23:43:35.213+05:30  INFO 23644 --- [Student-Attendance] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-31T23:43:35.234+05:30  INFO 23644 --- [Student-Attendance] [Thread-35] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T23:43:35.246+05:30  INFO 23644 --- [Student-Attendance] [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2025-10-31T23:43:37.716+05:30  INFO 23644 --- [Student-Attendance] [Thread-35] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2025-10-31T23:43:38.684+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : Starting StudentAttendanceApplication using Java 17.0.16 with PID 23644 (C:\Users\Shubham Patil\OneDrive\Desktop\ENDS\MS-Gosavi\target\classes started by Shubham Patil in c:\Users\Shubham Patil\OneDrive\Desktop\ENDS\MS-Gosavi)
+2025-10-31T23:43:38.698+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : The following 1 profile is active: "dev"
+2025-10-31T23:43:40.250+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-10-31T23:43:40.387+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 133 ms. Found 6 JPA repository interfaces.
+2025-10-31T23:43:40.854+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-10-31T23:43:40.861+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-10-31T23:43:40.942+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-10-31T23:43:41.394+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-10-31T23:43:41.398+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2679 ms
+2025-10-31T23:43:41.698+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-10-31T23:43:41.722+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-10-31T23:43:41.821+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-10-31T23:43:41.829+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2025-10-31T23:43:44.013+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection org.postgresql.jdbc.PgConnection@5c0a41a3
+2025-10-31T23:43:44.019+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2025-10-31T23:43:45.357+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-10)']
+	Database driver: undefined/unknown
+	Database version: 17.6
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-10-31T23:43:48.648+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-10-31T23:43:57.893+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-10-31T23:44:00.536+05:30  WARN 23644 --- [Student-Attendance] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-10-31T23:44:00.550+05:30  WARN 23644 --- [Student-Attendance] [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 64b43962-ac9a-45cb-9747-694665822999
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-10-31T23:44:00.552+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-10-31T23:44:00.783+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-10-31T23:44:00.802+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-10-31T23:44:00.812+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] c.A.S.StudentAttendanceApplication       : Started StudentAttendanceApplication in 22.643 seconds (process running for 2456.636)
+2025-10-31T23:44:00.815+05:30  INFO 23644 --- [Student-Attendance] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-10-31T23:44:05.283+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-10-31T23:44:05.296+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-10-31T23:44:05.303+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-10-31T23:44:05.318+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Teacher dashboard endpoint triggered
+2025-10-31T23:44:05.320+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Teacher dashboard department from session: computer
+2025-10-31T23:44:05.874+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Pending students found: 0
+2025-10-31T23:44:06.154+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Approved students found: 1
+2025-10-31T23:44:06.414+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-1] c.A.S.r.TeacherDashboardController       : Rejected students found: 0
+2025-10-31T23:44:07.398+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/teacher_dashboard.js.]
+2025-10-31T23:44:07.811+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-7] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:44:08.538+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-10-31T23:44:16.029+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-9] c.A.S.r.TeacherDashboardController       : Teacher dashboard endpoint triggered
+2025-10-31T23:44:16.029+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-9] c.A.S.r.TeacherDashboardController       : Teacher dashboard department from session: computer
+2025-10-31T23:44:16.288+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-9] c.A.S.r.TeacherDashboardController       : Pending students found: 0
+2025-10-31T23:44:16.563+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-9] c.A.S.r.TeacherDashboardController       : Approved students found: 1
+2025-10-31T23:44:16.827+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-9] c.A.S.r.TeacherDashboardController       : Rejected students found: 0
+2025-10-31T23:44:17.753+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-10] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/teacher_dashboard.js.]
+2025-10-31T23:44:17.931+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:44:19.095+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-10-31T23:44:23.800+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:44:31.349+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-8] c.A.S.r.TeacherDashboardController       : Teacher dashboard endpoint triggered
+2025-10-31T23:44:31.363+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-8] c.A.S.r.TeacherDashboardController       : Teacher dashboard department from session: computer
+2025-10-31T23:44:31.900+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-8] c.A.S.r.TeacherDashboardController       : Pending students found: 0
+2025-10-31T23:44:32.186+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-8] c.A.S.r.TeacherDashboardController       : Approved students found: 1
+2025-10-31T23:44:32.479+05:30  INFO 23644 --- [Student-Attendance] [http-nio-8081-exec-8] c.A.S.r.TeacherDashboardController       : Rejected students found: 0
+2025-10-31T23:44:33.517+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource static/js/teacher_dashboard.js.]
+2025-10-31T23:44:33.700+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:44:34.746+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotWritableException: Could not write JSON: Document nesting depth (1001) exceeds the maximum allowed (1000, from `StreamWriteConstraints.getMaxNestingDepth()`)]
+2025-10-31T23:44:46.338+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-3] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
+2025-10-31T23:44:47.286+05:30  WARN 23644 --- [Student-Attendance] [http-nio-8081-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico.]
