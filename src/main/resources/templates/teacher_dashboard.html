@@ -169,15 +169,23 @@
                     <td>
                         <select name="courseId" required>
                             <option value="" disabled selected>Select Course</option>
+                            <th:block th:if="${#lists.isEmpty(courses)}">
+                                <!-- Fallback options when server didn't provide courses -->
+                                <option value="OSY" th:value="'OSY'" th:text="'OSY'"></option>
+                                <option value="SEN" th:value="'SEN'" th:text="'SEN'"></option>
+                                <option value="DAN" th:value="'DAN'" th:text="'DAN'"></option>
+                                <option value="ENDS" th:value="'ENDS'" th:text="'ENDS'"></option>
+                            </th:block>
                             <option th:each="course : ${courses}" th:value="${course.courseId}" th:text="${course.courseName}"></option>
                         </select>
                     </td>
                     <td>
                         <select name="status" required>
                             <option value="" disabled selected>Select Status</option>
-                            <option value="true">Present</option>
-                            <option value="false">Absent</option>
-                            <option value="late">Late</option>
+                            <!-- Use enum names so backend AttendanceStatus.valueOf(...) works reliably -->
+                            <option value="PRESENT">Present</option>
+                            <option value="ABSENT">Absent</option>
+                            <option value="LATE">Late</option>
                         </select>
                     </td>
                     <td>
@@ -549,6 +557,36 @@
         }
     `;
     document.head.appendChild(style);
+</script>
+<script src="/static/js/teacher_dashboard.js"></script>
+<script>
+    // Existing inline scripts are preserved above; this block will attempt to fetch courses and populate all course selects on the page.
+    document.addEventListener('DOMContentLoaded', function() {
+        // Fetch courses from the backend API and populate select elements with name 'courseId'
+        fetch('/api/courses', { credentials: 'same-origin', headers: { 'Accept': 'application/json' } })
+            .then(resp => { if (!resp.ok) throw new Error('Failed to fetch courses'); return resp.json(); })
+            .then(courses => {
+                if (!Array.isArray(courses) || courses.length === 0) return;
+                const selects = document.querySelectorAll('select[name="courseId"]');
+                selects.forEach(select => {
+                    // Remove fallback options (options without numeric values)
+                    Array.from(select.options).forEach(opt => {
+                        if (!opt.value || isNaN(Number(opt.value))) opt.remove();
+                    });
+                    // Append fetched courses as options
+                    courses.forEach(course => {
+                        const option = document.createElement('option');
+                        option.value = course.courseId;
+                        option.textContent = course.courseName;
+                        select.appendChild(option);
+                    });
+                });
+            })
+            .catch(err => {
+                console.warn('Could not populate courses:', err);
+                // silently fail; fallback options remain if present
+            });
+    });
 </script>
 </body>
 </html>

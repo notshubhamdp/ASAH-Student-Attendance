@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-10-31T21:52:05+0530",
-    comments = "version: 1.6.3, compiler: javac, environment: Java 17.0.16 (Microsoft)"
+    date = "2025-10-31T22:30:56+0530",
+    comments = "version: 1.6.3, compiler: Eclipse JDT (IDE) 3.44.0.v20251023-0518, environment: Java 21.0.8 (Eclipse Adoptium)"
 )
 @Component
 public class AttendanceMapperImpl implements AttendanceMapper {
@@ -21,10 +21,10 @@ public class AttendanceMapperImpl implements AttendanceMapper {
 
         Attendance attendance = new Attendance();
 
-        attendance.setAttendanceId( attendanceDto.getAttendanceId() );
-        attendance.setUser( attendanceDto.getUser() );
         attendance.setAttendanceDate( attendanceDto.getAttendanceDate() );
+        attendance.setAttendanceId( attendanceDto.getAttendanceId() );
         attendance.setCreatedAt( attendanceDto.getCreatedAt() );
+        attendance.setUser( attendanceDto.getUser() );
 
         return attendance;
     }
@@ -37,10 +37,10 @@ public class AttendanceMapperImpl implements AttendanceMapper {
 
         AttendanceDto attendanceDto = new AttendanceDto();
 
-        attendanceDto.setAttendanceId( attendance.getAttendanceId() );
-        attendanceDto.setUser( attendance.getUser() );
         attendanceDto.setAttendanceDate( attendance.getAttendanceDate() );
+        attendanceDto.setAttendanceId( attendance.getAttendanceId() );
         attendanceDto.setCreatedAt( attendance.getCreatedAt() );
+        attendanceDto.setUser( attendance.getUser() );
 
         return attendanceDto;
     }
