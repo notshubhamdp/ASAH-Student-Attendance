@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance Reports - Student Attendance System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(120deg, #bae6fd 0%, #e0e7ff 100%);
+            margin: 0;
+            min-height: 100vh;
+            position: relative;
+        }
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.13;
+            z-index: 0;
+        }
+        .shape1 { width: 160px; height: 160px; background: #38bdf8; top: 30px; left: 30px; filter: blur(2px); }
+        .shape2 { width: 100px; height: 100px; background: #0ea5e9; bottom: 40px; right: 40px; filter: blur(2px); }
+        .header {
+            background: rgba(56,189,248,0.85);
+            color: #fff;
+            padding: 18px 0;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 24px rgba(56,189,248,0.10);
+            backdrop-filter: blur(4px);
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            background: rgba(255,255,255,0.85);
+            box-shadow: 0 2px 8px rgba(30,41,59,0.10);
+            padding: 10px 0;
+            position: relative;
+            z-index: 2;
+            border-radius: 0 0 32px 32px;
+            backdrop-filter: blur(2px);
+        }
+        .navbar a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.08rem;
+            padding: 6px 18px;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(56,189,248,0.08);
+        }
+        .navbar a:hover {
+            background: #bae6fd;
+            color: #0f172a;
+            box-shadow: 0 4px 16px rgba(56,189,248,0.18);
+        }
+        .container {
+            max-width: 900px;
+            margin: 48px auto;
+            background: rgba(255,255,255,0.82);
+            border-radius: 24px;
+            box-shadow: 0 12px 48px rgba(56,189,248,0.18);
+            padding: 44px 36px;
+            position: relative;
+            z-index: 1;
+            backdrop-filter: blur(8px);
+        }
+        h2 {
+            color: #38bdf8;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 24px;
+            background: rgba(186,230,253,0.45);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 12px 8px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th {
+            background: #bae6fd;
+            color: #38bdf8;
+            font-weight: 600;
+        }
+        tr:hover {
+            background: #f1f5f9;
+        }
+        .filter-form {
+            display: flex;
+            gap: 18px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        .filter-form select, .filter-form input {
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #cbd5e1;
+            font-size: 1rem;
+        }
+        .btn {
+            background: linear-gradient(90deg, #38bdf8 0%, #0ea5e9 100%);
+            color: #fff;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.12rem;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(56,189,248,0.15);
+            transition: background 0.2s, transform 0.2s;
+        }
+        .btn:hover {
+            background: linear-gradient(90deg, #0ea5e9 0%, #38bdf8 100%);
+            transform: scale(1.05);
+        }
+        .popup-green { background:#22c55e; color:#fff; }
+        .popup-red { background:#ef4444; color:#fff; }
+        .popup-yellow { background:#facc15; color:#333; }
+        @media (max-width: 900px) {
+            .container { max-width: 98vw; padding: 18px 6px; }
+            table { font-size: 0.98rem; }
+        }
+    </style>
+</head>
+<body>
+        <div class="floating-shape shape1"></div>
+        <div class="floating-shape shape2"></div>
+    <div class="header">Student Attendance System</div>
+    <div class="navbar">
+    <!-- Home button removed -->
+    <a href="/teacher/dashboard">Dashboard</a>
+    <a href="/profile">Profile</a>
+    <a href="/logout">Logout</a>
+    </div>
+    <div class="container">
+        <h2>Attendance Reports</h2>
+        <!-- Attendance Marked Message -->
+        <div th:if="${param.status} and ${param.student}" th:text="'Student attendance marked for ' + ${param.status} + ': ' + ${param.student}"
+             th:classappend="${param.status == 'PRESENT'} ? 'popup-green' : (${param.status == 'ABSENT'} ? 'popup-red' : (${param.status == 'LATE'} ? 'popup-yellow' : ''))"
+             style="margin:16px auto;text-align:center;font-weight:600;font-size:1.15rem;padding:12px 32px;border-radius:12px;max-width:500px;">
+        </div>
+        <div style="display:flex;gap:16px;justify-content:center;margin-bottom:20px;">
+            <button class="btn" onclick="showSection('present')">Present</button>
+            <button class="btn" onclick="showSection('absent')">Absent</button>
+            <button class="btn" onclick="showSection('late')">Late</button>
+        </div>
+        <div style="text-align:center;margin-bottom:24px;">
+            <input type="text" id="studentSearch" placeholder="Search student name..." style="padding:8px 16px;border-radius:8px;border:1px solid #bae6fd;width:260px;" onkeyup="filterStudents()">
+        </div>
+        <form class="filter-form" method="get" action="/reports">
+    <!-- Filter form removed as requested -->
+
+        <div id="presentSection">
+            <h3 style="color:#22c55e;">Present</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Student</th>
+                        <th>Course</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="record : ${attendanceRecords.?[status?.name() == 'PRESENT']}" class="presentRow">
+                        <td th:text="${record.attendanceDate}"></td>
+                        <td th:text="${record.user.firstName + ' ' + record.user.lastName}"></td>
+                        <td th:text="${record.course.courseName}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="absentSection" style="display:none;">
+            <h3 style="color:#ef4444;">Absent</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Student</th>
+                        <th>Course</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="record : ${attendanceRecords.?[status?.name() == 'ABSENT']}" class="absentRow">
+                        <td th:text="${record.attendanceDate}"></td>
+                        <td th:text="${record.user.firstName + ' ' + record.user.lastName}"></td>
+                        <td th:text="${record.course.courseName}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="lateSection" style="display:none;">
+            <h3 style="color:#f59e42;">Late</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Student</th>
+                        <th>Course</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="record : ${attendanceRecords.?[status?.name() == 'LATE']}" class="lateRow">
+                        <td th:text="${record.attendanceDate}"></td>
+                        <td th:text="${record.user.firstName + ' ' + record.user.lastName}"></td>
+                        <td th:text="${record.course.courseName}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <script>
+        function showSection(section) {
+            document.getElementById('presentSection').style.display = section === 'present' ? '' : 'none';
+            document.getElementById('absentSection').style.display = section === 'absent' ? '' : 'none';
+            document.getElementById('lateSection').style.display = section === 'late' ? '' : 'none';
+        }
+        function filterStudents() {
+            var input = document.getElementById('studentSearch').value.toLowerCase();
+            ['presentRow','absentRow','lateRow'].forEach(function(rowClass) {
+                var rows = document.getElementsByClassName(rowClass);
+                for (var i = 0; i < rows.length; i++) {
+                    var nameCell = rows[i].getElementsByTagName('td')[1];
+                    if (nameCell) {
+                        var name = nameCell.textContent.toLowerCase();
+                        rows[i].style.display = name.includes(input) ? '' : 'none';
+                    }
+                }
+            });
+        }
+        // Show Present section by default
+        showSection('present');
+        </script>
+    </div>
+    <div class="container" style="margin: 40px auto; max-width: 900px; background: #fff; border-radius: 16px; box-shadow: 0 2px 16px rgba(56,189,248,0.10); padding: 32px;">
+        <h2 style="color: #0ea5e9;">Defaulter List</h2>
+        <form id="defaulterForm" style="margin-bottom: 24px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+            <label>Start Date: <input type="date" id="startDate" required></label>
+            <label>End Date: <input type="date" id="endDate" required></label>
+            <label>Threshold (%): <input type="number" id="percentageThreshold" min="0" max="100" value="75" required></label>
+            <button type="submit" style="background: #38bdf8; color: #fff; border: none; padding: 8px 18px; border-radius: 6px; font-weight: 600; cursor: pointer;">View Defaulter List</button>
+            <button type="button" id="exportPdfBtn" class="btn" style="background:#0ea5e9;">Export PDF</button>
+            <button type="button" id="exportExcelBtn" class="btn" style="background:#38bdf8;">Export Excel</button>
+        </form>
+        <table id="defaulterTable" style="width: 100%; border-collapse: collapse; margin-top: 16px; display: none;">
+            <thead>
+                <tr style="background: #bae6fd;">
+                    <th>Roll Number</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Branch</th>
+                    <th>Attendance (%)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div id="noDefaulters" style="color: #ef4444; margin-top: 16px; display: none;">No defaulters found for selected range.</div>
+    </div>
+    <div class="container" style="margin: 40px auto; max-width: 900px; background: #fff; border-radius: 16px; box-shadow: 0 2px 16px rgba(56,189,248,0.10); padding: 32px;">
+        <h2 style="color: #0ea5e9;">Attendance Trend</h2>
+        <form id="trendForm" style="margin-bottom: 24px; display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+            <label>Start Date: <input type="date" id="trendStartDate" required></label>
+            <label>End Date: <input type="date" id="trendEndDate" required></label>
+            <button type="submit" style="background: #38bdf8; color: #fff; border: none; padding: 8px 18px; border-radius: 6px; font-weight: 600; cursor: pointer;">Show Trend</button>
+        </form>
+        <canvas id="attendanceTrendChart" width="800" height="300"></canvas>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+    document.getElementById('defaulterForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var startDate = document.getElementById('startDate').value;
+        var endDate = document.getElementById('endDate').value;
+        var threshold = document.getElementById('percentageThreshold').value;
+
+        // Dummy data for defaulter list (replace with real data fetching logic)
+        var defaulters = [
+            { rollNo: '101', name: 'John Doe', email: 'john@example.com', branch: 'CSE', attendance: 70 },
+            { rollNo: '102', name: 'Jane Smith', email: 'jane@example.com', branch: 'ECE', attendance: 65 },
+            { rollNo: '103', name: 'Sam Brown', email: 'sam@example.com', branch: 'ME', attendance: 80 }
+        ];
+
+        var filteredDefaulters = defaulters.filter(function(d) {
+            return d.attendance < threshold;
+        });
+
+        var tableBody = document.getElementById('defaulterTable').getElementsByTagName('tbody')[0];
+        tableBody.innerHTML = '';
+
+        if (filteredDefaulters.length > 0) {
+            document.getElementById('defaulterTable').style.display = '';
+            document.getElementById('noDefaulters').style.display = 'none';
+            filteredDefaulters.forEach(function(defaulter) {
+                var row = tableBody.insertRow();
+                row.insertCell(0).innerText = defaulter.rollNo;
+                row.insertCell(1).innerText = defaulter.name;
+                row.insertCell(2).innerText = defaulter.email;
+                row.insertCell(3).innerText = defaulter.branch;
+                row.insertCell(4).innerText = defaulter.attendance + ' %';
+            });
+        } else {
+            document.getElementById('defaulterTable').style.display = 'none';
+            document.getElementById('noDefaulters').style.display = '';
+        }
+    });
+
+    document.getElementById('exportPdfBtn').addEventListener('click', function() {
+        // Implement PDF export logic here
+        alert('Export to PDF feature is not implemented yet.');
+    });
+
+    document.getElementById('exportExcelBtn').addEventListener('click', function() {
+        // Implement Excel export logic here
+        alert('Export to Excel feature is not implemented yet.');
+    });
+
+    document.getElementById('trendForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var startDate = document.getElementById('trendStartDate').value;
+        var endDate = document.getElementById('trendEndDate').value;
+
+        // Dummy data for attendance trends (replace with real data fetching logic)
+        var trendData = {
+            labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+            datasets: [
+                {
+                    label: 'Present',
+                    data: [90, 85, 88, 92],
+                    backgroundColor: 'rgba(34, 197, 94, 0.2)',
+                    borderColor: '#22c55e',
+                    borderWidth: 2,
+                    fill: true
+                },
+                {
+                    label: 'Absent',
+                    data: [10, 15, 12, 8],
+                    backgroundColor: 'rgba(239, 68, 68, 0.2)',
+                    borderColor: '#ef4444',
+                    borderWidth: 2,
+                    fill: true
+                },
+                {
+                    label: 'Late',
+                    data: [5, 3, 4, 2],
+                    backgroundColor: 'rgba(245, 158, 11, 0.2)',
+                    borderColor: '#f59e42',
+                    borderWidth: 2,
+                    fill: true
+                }
+            ]
+        };
+
+        var ctx = document.getElementById('attendanceTrendChart').getContext('2d');
+        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+        var trendChart = new Chart(ctx, {
+            type: 'line',
+            data: trendData,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false,
+                    }
+                },
+                interaction: {
+                    mode: 'index',
+                    intersect: false
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Weeks'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Attendance (%)'
+                        },
+                        beginAtZero: true
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

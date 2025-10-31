@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teachers - Student Attendance System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: 'Roboto', Arial, sans-serif; background: #f0f4f8; margin: 0; }
+        .container { max-width: 800px; margin: 48px auto; background: #fff; border-radius: 16px; box-shadow: 0 8px 32px rgba(30,41,59,0.12); padding: 36px 28px; }
+        h2 { color: #0ea5e9; text-align: center; margin-bottom: 32px; }
+        table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+        th, td { padding: 12px 8px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        th { background: #bae6fd; color: #38bdf8; font-weight: 600; }
+        tr:hover { background: #f1f5f9; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Teachers List</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="teacher : ${teachers}">
+                    <td th:text="${teacher.firstName + ' ' + teacher.lastName}"></td>
+                    <td th:text="${teacher.department}"></td>
+                    <td th:text="${teacher.email}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Dashboard - Student Attendance System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(120deg, #bae6fd 0%, #e0e7ff 100%);
+            margin: 0;
+            min-height: 100vh;
+            position: relative;
+        }
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.13;
+            z-index: 0;
+        }
+        .shape1 { width: 160px; height: 160px; background: #38bdf8; top: 30px; left: 30px; filter: blur(2px); }
+        .shape2 { width: 100px; height: 100px; background: #0ea5e9; bottom: 40px; right: 40px; filter: blur(2px); }
+        .header {
+            background: rgba(56,189,248,0.85);
+            color: #fff;
+            padding: 18px 0;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 24px rgba(56,189,248,0.10);
+            backdrop-filter: blur(4px);
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            background: rgba(255,255,255,0.85);
+            box-shadow: 0 2px 8px rgba(30,41,59,0.10);
+            padding: 10px 0;
+            position: relative;
+            z-index: 2;
+            border-radius: 0 0 32px 32px;
+            backdrop-filter: blur(2px);
+        }
+        .navbar a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.08rem;
+            padding: 6px 18px;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(56,189,248,0.08);
+        }
+        .navbar a:hover {
+            background: #bae6fd;
+            color: #0f172a;
+            box-shadow: 0 4px 16px rgba(56,189,248,0.18);
+        }
+        .container {
+            max-width: 540px;
+            margin: 48px auto;
+            background: rgba(255,255,255,0.82);
+            border-radius: 24px;
+            box-shadow: 0 12px 48px rgba(56,189,248,0.18);
+            padding: 44px 36px;
+            position: relative;
+            z-index: 1;
+            backdrop-filter: blur(8px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .profile-card {
+            background: rgba(186,230,253,0.45);
+            border-radius: 18px;
+            box-shadow: 0 4px 18px rgba(56,189,248,0.10);
+            padding: 28px 22px;
+            width: 100%;
+            margin-bottom: 32px;
+            text-align: center;
+            position: relative;
+        }
+        .profile-card h2 {
+            color: #38bdf8;
+            margin-bottom: 12px;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .profile-card p {
+            color: #475569;
+            margin: 6px 0;
+            font-size: 1.05rem;
+        }
+        .btn {
+            background: linear-gradient(90deg, #38bdf8 0%, #0ea5e9 100%);
+            color: #fff;
+            padding: 16px 0;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.13rem;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 2px 8px rgba(56,189,248,0.15);
+            transition: background 0.2s, transform 0.2s;
+            margin-top: 8px;
+        }
+        .btn:hover {
+            background: linear-gradient(90deg, #0ea5e9 0%, #38bdf8 100%);
+            transform: scale(1.05);
+        }
+        @media (max-width: 700px) {
+            .container { max-width: 98vw; padding: 18px 6px; }
+            .profile-card { padding: 16px 6px; }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dashboardSection = document.getElementById('dashboard-section');
+            const profileSection = document.getElementById('profile-section');
+            const dashboardLink = document.querySelector('.navbar a[href="/student/dashboard"]');
+            const profileLink = document.querySelector('.navbar a[href="#profile-section"]');
+
+            // Show dashboard by default, hide profile
+            dashboardSection.style.display = 'block';
+            profileSection.style.display = 'none';
+
+            dashboardLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                dashboardSection.style.display = 'block';
+                profileSection.style.display = 'none';
+            });
+            profileLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                dashboardSection.style.display = 'none';
+                profileSection.style.display = 'block';
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="floating-shape shape1"></div>
+    <div class="floating-shape shape2"></div>
+    <div class="header">Student Dashboard</div>
+    <div class="navbar">
+        <a href="/student/dashboard">Dashboard</a>
+        <a href="#profile-section">Profile</a>
+        <a href="/logout">Logout</a>
+    </div>
+    <div class="container">
+        <!-- Dashboard Section -->
+        <div class="profile-card" id="dashboard-section">
+            <h2>Welcome, <span th:text="${user.username}">Student Name</span></h2>
+            <p><strong>Roll No:</strong> <span th:text="${user.rollNo}">[Roll Number]</span></p>
+            <p><strong>Department:</strong> <span th:text="${user.department}">[Department]</span></p>
+            <form action="/student/attendance" method="get" style="width:100%;">
+                <button type="submit" class="btn">View Attendance</button>
+            </form>
+        </div>
+        <!-- Profile Section -->
+        <div class="profile-card" id="profile-section" style="margin-top:32px;">
+            <h3 style="color:#0ea5e9;text-align:center;margin-bottom:18px;">Update Profile</h3>
+            <form action="/profile" method="post" style="width:100%;">
+                <div style="margin-bottom:12px;">
+                    <label for="firstName" style="font-weight:500;">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" th:value="${firstName}" required style="width:100%;padding:8px;border-radius:8px;border:1px solid #bae6fd;">
+                </div>
+                <div style="margin-bottom:12px;">
+                    <label for="lastName" style="font-weight:500;">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" th:value="${lastName}" required style="width:100%;padding:8px;border-radius:8px;border:1px solid #bae6fd;">
+                </div>
+                <div style="margin-bottom:12px;">
+                    <label for="email" style="font-weight:500;">Email:</label>
+                    <input type="email" id="email" name="email" th:value="${email}" required style="width:100%;padding:8px;border-radius:8px;border:1px solid #bae6fd;">
+                </div>
+                <div style="margin-bottom:12px;">
+                    <label for="phone" style="font-weight:500;">Phone:</label>
+                    <input type="text" id="phone" name="phone" th:value="${phone}" style="width:100%;padding:8px;border-radius:8px;border:1px solid #bae6fd;">
+                </div>
+                <button type="submit" class="btn">Save Profile</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

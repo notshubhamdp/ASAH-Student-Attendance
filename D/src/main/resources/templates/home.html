@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Attendance System - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            background: radial-gradient(circle at 20% 20%, #bae6fd 0%, #38bdf8 40%, #0ea5e9 100%);
+            color: #222;
+            position: relative;
+            overflow-x: hidden;
+        }
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.13;
+            z-index: 0;
+            animation: float 8s ease-in-out infinite;
+        }
+        .shape1 { width: 220px; height: 220px; background: #fff; top: 2%; left: 3%; animation-delay: 0s; filter: blur(2px); }
+        .shape2 { width: 140px; height: 140px; background: #38bdf8; top: 85%; left: 80%; animation-delay: 2s; filter: blur(1px); }
+        .shape3 { width: 110px; height: 110px; background: #0ea5e9; top: 60%; left: 8%; animation-delay: 4s; filter: blur(1px); }
+        .shape4 { width: 80px; height: 80px; background: #fff; top: 40%; left: 90%; animation-delay: 3s; filter: blur(2px); }
+        @keyframes float {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-30px) scale(1.08); }
+        }
+        .navbar {
+            background: linear-gradient(90deg, #0ea5e9 0%, #38bdf8 60%, #bae6fd 100%); /* matches hero bg */
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 28px;
+            box-shadow: 0 8px 32px rgba(30,41,59,0.18);
+            border-radius: 0 0 64px 64px;
+            position: relative;
+            z-index: 3;
+            overflow: visible;
+            border-bottom: none;
+            animation: navbarFadeIn 1.2s cubic-bezier(.42,0,.58,1);
+        }
+        @keyframes navbarFadeIn {
+            0% { opacity: 0; transform: translateY(-40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .navbar h1 {
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-shadow: 0 2px 8px #38bdf8;
+        }
+        .navbar a, .navbar .nav-link, .navbar .brand {
+            color: #fff !important;
+            font-weight: normal;
+            text-shadow: 0 2px 8px rgba(30,41,59,0.18);
+            transition: color 0.2s;
+            text-decoration: none !important;
+            margin: 0 10px;
+            padding: 2px 0;
+        }
+        .navbar a:hover, .navbar .nav-link:hover, .navbar .brand:hover {
+            color: #bae6fd !important;
+            text-decoration: none !important;
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 72vh;
+            text-align: center;
+            background: rgba(255,255,255,0.10);
+            color: #fff;
+            position: relative;
+            z-index: 1;
+            margin-top: 0;
+        }
+        .glass-card {
+            background: rgba(255,255,255,0.16);
+            border-radius: 18px;
+            box-shadow: 0 6px 24px rgba(30,41,59,0.18);
+            padding: 40px 28px;
+            max-width: 600px;
+            margin: 0 auto;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.18);
+            position: relative;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1.2s cubic-bezier(.42,0,.58,1);
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(40px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .hero-content h2 {
+            font-size: 3.5rem;
+            margin-bottom: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 12px #38bdf8;
+        }
+        .hero-content p {
+            font-size: 1.45rem;
+            margin-bottom: 30px;
+            color: #e0e7ff;
+            text-shadow: 0 1px 8px #0ea5e9;
+        }
+        .hero-content .subtitle {
+            font-size: 1.18rem;
+            color: #bae6fd;
+            margin-bottom: 18px;
+            font-weight: 500;
+            text-shadow: 0 1px 8px #38bdf8;
+        }
+        .cta-btn {
+            background: linear-gradient(90deg, #38bdf8 0%, #0ea5e9 100%);
+            color: #fff;
+            padding: 22px 54px;
+            font-size: 1.22rem;
+            border: none;
+            border-radius: 16px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 6px 24px rgba(56,189,248,0.22);
+            transition: background 0.2s, transform 0.2s;
+        }
+        .cta-btn:hover {
+            background: linear-gradient(90deg, #0ea5e9 0%, #38bdf8 100%);
+            transform: scale(1.09);
+        }
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 56px;
+            margin: 80px auto 60px auto;
+            max-width: 1200px;
+            z-index: 2;
+            position: relative;
+        }
+        .feature-card {
+            background: rgba(255,255,255,0.28);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(30,41,59,0.13);
+            padding: 54px 38px;
+            flex: 1 1 270px;
+            min-width: 270px;
+            max-width: 340px;
+            text-align: center;
+            position: relative;
+            backdrop-filter: blur(8px);
+            border: 1.5px solid rgba(255,255,255,0.22);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px) scale(1.06);
+            box-shadow: 0 12px 40px rgba(56,189,248,0.22);
+        }
+        .feature-card h3 {
+            margin-bottom: 18px;
+            color: #0f172a;
+            font-size: 1.5rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            text-shadow: 0 1px 8px #bae6fd;
+        }
+        .feature-card p {
+            color: #475569;
+            font-size: 1.12rem;
+        }
+        .feature-card .icon {
+            font-size: 2.6rem;
+            margin-bottom: 12px;
+            color: #38bdf8;
+            text-shadow: 0 1px 8px #bae6fd;
+        }
+        footer {
+            background: #e0e7ff;
+            text-align: center;
+            padding: 44px 0 18px 0;
+            color: #64748b;
+            font-size: 1.12rem;
+            margin-top: 80px;
+            border-radius: 32px 32px 0 0;
+            box-shadow: 0 -2px 16px #bae6fd;
+        }
+        @media (max-width: 1200px) {
+            .features { flex-direction: column; gap: 32px; }
+            .navbar { flex-direction: column; padding: 28px 10px; }
+            .glass-card { padding: 36px 10px; }
+        }
+    </style>
+</head>
+    <body>
+    <div class="floating-shape shape1"></div>
+    <div class="floating-shape shape2"></div>
+    <div class="floating-shape shape3"></div>
+    <div class="floating-shape shape4"></div>
+        <div class="navbar" style="border-radius: 0 0 64px 64px; box-shadow: 0 8px 32px rgba(30,41,59,0.18); overflow: visible; background: linear-gradient(90deg, #0ea5e9 0%, #38bdf8 60%, #bae6fd 100%); border-bottom: none; animation: navbarFadeIn 1.2s cubic-bezier(.42,0,.58,1);">
+            <h1 style="text-shadow: 0 2px 12px #bae6fd;">Student Attendance</h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/login">Login</a>
+                <a href="/register">Register</a>
+            </nav>
+        </div>
+        <section class="hero" style="position:relative;min-height:72vh;display:flex;align-items:center;justify-content:center;padding-top:0;margin-top:0;">
+            <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&q=80" alt="Students Banner" style="width:100vw;max-width:100%;height:400px;object-fit:cover;filter:brightness(0.7) blur(0.5px);position:absolute;top:0;left:0;z-index:0;box-shadow:0 8px 32px rgba(30,41,59,0.18);">
+            <div class="glass-card hero-content" style="position:relative;z-index:2;margin-top:0;">
+                <div class="subtitle">Smart, Secure & Fast</div>
+                <h2>Effortless Attendance Management</h2>
+                <p>Track, manage, and analyze student attendance with a modern, secure, and user-friendly platform.</p>
+                <a href="/login" class="cta-btn">Get Started</a>
+            </div>
+        </section>
+        <section class="features">
+            <div class="feature-card">
+                <div class="icon">&#128246;</div>
+                <h3>Real-Time Tracking</h3>
+                <p>Monitor attendance instantly for students, teachers, and administrators.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#128274;</div>
+                <h3>Secure & Reliable</h3>
+                <p>Data privacy and security with robust authentication and role-based access.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#128202;</div>
+                <h3>Analytics & Reports</h3>
+                <p>Visualize attendance trends and generate insightful reports for better decision-making.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">&#128187;</div>
+                <h3>Easy Integration</h3>
+                <p>Seamlessly connect with other academic systems and tools.</p>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; 2025 Student Attendance System. All rights reserved.</p>
+        </footer>
+    </body>
+</html>

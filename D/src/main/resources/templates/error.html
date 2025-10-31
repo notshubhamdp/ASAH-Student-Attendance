@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error - Student Attendance System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(120deg, #bae6fd 0%, #e0e7ff 100%);
+            margin: 0;
+            min-height: 100vh;
+            position: relative;
+        }
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.13;
+            z-index: 0;
+        }
+        .shape1 { width: 140px; height: 140px; background: #38bdf8; top: 30px; left: 30px; filter: blur(2px); }
+        .shape2 { width: 90px; height: 90px; background: #0ea5e9; bottom: 40px; right: 40px; filter: blur(2px); }
+        .header {
+            background: linear-gradient(90deg, #0ea5e9 0%, #38bdf8 60%, #bae6fd 100%);
+            color: #fff;
+            padding: 18px 0;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 24px rgba(14,165,233,0.10);
+            backdrop-filter: blur(4px);
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            background: rgba(255,255,255,0.85);
+            box-shadow: 0 2px 8px rgba(30,41,59,0.10);
+            padding: 10px 0;
+            position: relative;
+            z-index: 2;
+            border-radius: 0 0 32px 32px;
+            backdrop-filter: blur(2px);
+        }
+        .navbar a {
+            color: #0ea5e9;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.08rem;
+            padding: 6px 18px;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(56,189,248,0.08);
+        }
+        .navbar a:hover {
+            background: #bae6fd;
+            color: #0f172a;
+            box-shadow: 0 4px 16px rgba(56,189,248,0.18);
+        }
+        .container {
+            max-width: 420px;
+            margin: 70px auto;
+            background: rgba(255,255,255,0.82);
+            border-radius: 16px;
+            box-shadow: 0 12px 48px rgba(56,189,248,0.18);
+            padding: 40px 32px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            backdrop-filter: blur(8px);
+        }
+        h2 {
+            color: #38bdf8;
+            margin-bottom: 18px;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        p {
+            color: #475569;
+            margin-bottom: 24px;
+        }
+        .btn {
+            background: linear-gradient(90deg, #38bdf8 0%, #0ea5e9 100%);
+            color: #fff;
+            padding: 14px 0;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 2px 8px rgba(56,189,248,0.15);
+            transition: background 0.2s, transform 0.2s;
+        }
+        .btn:hover {
+            background: linear-gradient(90deg, #0ea5e9 0%, #38bdf8 100%);
+            transform: scale(1.05);
+        }
+        @media (max-width: 700px) {
+            .container { max-width: 98vw; padding: 18px 6px; }
+        }
+    </style>
+</head>
+<body>
+        <div class="floating-shape shape1"></div>
+        <div class="floating-shape shape2"></div>
+    <div class="header">Student Attendance System</div>
+    <div class="navbar">
+        <a href="/home">Home</a>
+    </div>
+    <div class="container">
+        <h2>404 - Page Not Found</h2>
+        <p>Sorry, the page you are looking for does not exist or an error occurred.</p>
+        <a href="/home" class="btn">Go to Home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Student Attendance System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', Arial, sans-serif; background: linear-gradient(120deg, #38bdf8 0%, #e0e7ff 100%); margin: 0; }
+        .container { max-width: 420px; margin: 70px auto; background: #fff; border-radius: 16px; box-shadow: 0 4px 18px rgba(30,41,59,0.10); padding: 40px 32px; }
+        h2 { text-align: center; color: #0f172a; margin-bottom: 28px; font-size: 2rem; font-weight: 700; }
+        form { display: flex; flex-direction: column; gap: 18px; }
+        label { color: #475569; font-weight: 500; margin-bottom: 6px; }
+        select, input[type="text"], input[type="password"] { padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 1.05rem; }
+        .btn { background: linear-gradient(90deg, #38bdf8 0%, #0ea5e9 100%); color: #fff; padding: 14px; border: none; border-radius: 10px; font-weight: 700; font-size: 1.1rem; cursor: pointer; box-shadow: 0 2px 8px rgba(56,189,248,0.15); transition: background 0.2s, transform 0.2s; }
+        .btn:hover { background: linear-gradient(90deg, #0ea5e9 0%, #38bdf8 100%); transform: scale(1.04); }
+        .register-link { text-align: center; margin-top: 22px; color: #475569; }
+        .register-link a { color: #38bdf8; text-decoration: none; font-weight: 500; }
+        .register-link a:hover { text-decoration: underline; }
+        .icon { display: block; text-align: center; font-size: 2.5rem; color: #38bdf8; margin-bottom: 18px; }
+        #errorMsg { color: #ef4444; text-align: center; margin-top: 10px; font-size: 1rem; font-weight: 500; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">&#128274;</div>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="role">Role</label>
+            <select id="role" name="role" required>
+                <option value="">Select Role</option>
+                <option value="teacher">Teacher</option>
+                <option value="student">Student</option>
+                <option value="admin">Admin</option>
+            </select>
+            <div id="departmentDiv" style="display:none;">
+                <label for="department">Department</label>
+                <select id="department" name="department">
+                    <option value="">Select Department</option>
+                    <option value="computer">Computer Engineering</option>
+                    <option value="mechanical">Mechanical Engineering</option>
+                    <option value="civil">Civil Engineering</option>
+                    <option value="electrical">Electrical Engineering</option>
+                </select>
+            </div>
+            <div id="studentFields" style="display:none;">
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" style="width:100%;">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" style="width:100%;">
+                </div>
+            </div>
+            <div id="teacherFields" style="display:none;">
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" style="width:100%;">
+                    <label for="passwordTeacher">Password</label>
+                    <input type="password" id="passwordTeacher" name="passwordTeacher" style="width:100%;">
+                </div>
+            </div>
+            <div id="adminFields" style="display:none;">
+                <div style="display: flex; flex-direction: column; gap: 8px;">
+                    <label for="usernameAdmin">Username</label>
+                    <input type="text" id="usernameAdmin" name="usernameAdmin" style="width:100%;">
+                    <label for="passwordAdmin">Password</label>
+                    <input type="password" id="passwordAdmin" name="passwordAdmin" style="width:100%;">
+                </div>
+            </div>
+            <button type="submit" class="btn">Login</button>
+        </form>
+        <div id="errorMsg" style="color: red; text-align: center; margin-top: 10px;"></div>
+        <div class="register-link">
+            <span>Don't have an account?</span> <a href="/register">Register</a>
+        </div>
+        <script src="/js/login.js"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const roleSelect = document.getElementById('role');
+            const deptDiv = document.getElementById('departmentDiv');
+            const studentFields = document.getElementById('studentFields');
+            const teacherFields = document.getElementById('teacherFields');
+            const adminFields = document.getElementById('adminFields');
+            roleSelect.addEventListener('change', function() {
+                let role = this.value;
+                deptDiv.style.display = (role === 'student' || role === 'teacher') ? 'block' : 'none';
+                studentFields.style.display = (role === 'student') ? 'block' : 'none';
+                teacherFields.style.display = (role === 'teacher') ? 'block' : 'none';
+                adminFields.style.display = (role === 'admin') ? 'block' : 'none';
+            });
+        });
+        </script>
+    </div>
+</body>
+</html>

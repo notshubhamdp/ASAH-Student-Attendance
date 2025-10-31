@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: Student-Attendance
+
+
+  profiles:
+    active: dev
+
+  datasource:
+    url: jdbc:postgresql://root:r1XQ3Tg30oLHI1GJHMKp5uQuCI467n8r@dpg-d42c2a3e5dus73bjqebg-a.oregon-postgres.render.com:5432/attendance_db_ey5z
+    username: root
+    password: r1XQ3Tg30oLHI1GJHMKp5uQuCI467n8r
+
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 8081
+
+logging:
+  file:
+    name: logs/spring.log
+  level:
+    root: INFO
+    com.AS.Student_Attendance: INFO

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard - Student Attendance System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(120deg, #bae6fd 0%, #e0e7ff 100%);
+            margin: 0;
+            min-height: 100vh;
+            position: relative;
+        }
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.13;
+            z-index: 0;
+        }
+        .shape1 { width: 160px; height: 160px; background: #38bdf8; top: 30px; left: 30px; filter: blur(2px); }
+        .shape2 { width: 100px; height: 100px; background: #0ea5e9; bottom: 40px; right: 40px; filter: blur(2px); }
+        .header {
+            background: rgba(56,189,248,0.85);
+            color: #fff;
+            padding: 18px 0;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 24px rgba(56,189,248,0.10);
+            backdrop-filter: blur(4px);
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            background: rgba(255,255,255,0.85);
+            box-shadow: 0 2px 8px rgba(30,41,59,0.10);
+            padding: 10px 0;
+            position: relative;
+            z-index: 2;
+            border-radius: 0 0 32px 32px;
+            backdrop-filter: blur(2px);
+        }
+        .navbar a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.08rem;
+            padding: 6px 18px;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(56,189,248,0.08);
+        }
+        .navbar a:hover {
+            background: #bae6fd;
+            color: #0f172a;
+            box-shadow: 0 4px 16px rgba(56,189,248,0.18);
+        }
+        .dashboard-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: center;
+            margin: 64px 0;
+            position: relative;
+            z-index: 1;
+        }
+        .card {
+            background: rgba(255,255,255,0.82);
+            border-radius: 24px;
+            box-shadow: 0 12px 48px rgba(56,189,248,0.18);
+            padding: 44px 36px;
+            min-width: 260px;
+            text-align: center;
+            transition: box-shadow 0.2s, transform 0.2s;
+            backdrop-filter: blur(8px);
+            position: relative;
+        }
+        .card:hover {
+            box-shadow: 0 16px 48px rgba(56,189,248,0.18);
+            transform: translateY(-6px) scale(1.04);
+        }
+        .card-title {
+            color: #38bdf8;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 22px;
+            letter-spacing: 0.5px;
+        }
+        .btn {
+            background: linear-gradient(90deg, #38bdf8 0%, #0ea5e9 100%);
+            color: #fff;
+            padding: 14px 0;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.12rem;
+            cursor: pointer;
+            width: 100%;
+            box-shadow: 0 2px 8px rgba(56,189,248,0.15);
+            transition: background 0.2s, transform 0.2s;
+        }
+        .btn:hover {
+            background: linear-gradient(90deg, #0ea5e9 0%, #38bdf8 100%);
+            transform: scale(1.05);
+        }
+        @media (max-width: 700px) {
+            .dashboard-cards { flex-direction: column; gap: 24px; }
+            .card { min-width: 90vw; padding: 28px 12px; }
+        }
+    </style>
+</head>
+<body>
+        <div class="floating-shape shape1"></div>
+        <div class="floating-shape shape2"></div>
+    <div class="header">Student Attendance System</div>
+    <div class="navbar">
+        <a href="/home">Home</a>
+        <a href="/admin_dashboard">Dashboard</a>
+        <a href="/profile">Profile</a>
+        <a href="/logout">Logout</a>
+    </div>
+    <div class="dashboard-cards">
+        <div class="card">
+            <div class="card-title">Manage Students</div>
+            <form action="/students" method="get">
+                <button type="submit" class="btn">Go to Students</button>
+            </form>
+        </div>
+        <div class="card">
+            <div class="card-title">Manage Teachers</div>
+            <form action="/teachers" method="get" style="margin-bottom:18px;">
+                <button type="submit" class="btn">Go to Teacher</button>
+            </form>
+            <div style="margin-top:24px;">
+                <div style="display:flex;gap:12px;margin-bottom:18px;">
+                    <button id="pendingTab" class="btn" style="width:auto;padding:8px 18px;font-size:1rem;">Pending</button>
+                    <button id="approvedTab" class="btn" style="width:auto;padding:8px 18px;font-size:1rem;background:#e0e7ff;color:#38bdf8;">Approved</button>
+                </div>
+                <div id="pendingTeachersSection">
+                    <table style="width:100%;border-collapse:collapse;">
+                        <thead>
+                            <tr style="background:#e0e7ff;color:#0f172a;">
+                                <th style="padding:8px;border:1px solid #bae6fd;">Name</th>
+                                <th style="padding:8px;border:1px solid #bae6fd;">Email</th>
+                                <th style="padding:8px;border:1px solid #bae6fd;">Department</th>
+                                <th style="padding:8px;border:1px solid #bae6fd;">Status</th>
+                                <th style="padding:8px;border:1px solid #bae6fd;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="teachersTableBody"></tbody>
+                    </table>
+                </div>
+                <div id="approvedTeachersSection" style="display:none;">
+                    <table style="width:100%;border-collapse:collapse;">
+                        <thead>
+                            <tr style="background:#e0e7ff;color:#0f172a;">
+                                <th style="padding:8px;border:1px solid #bae6fd;">Name</th>
+                                <th style="padding:8px;border:1px solid #bae6fd;">Email</th>
+                                <th style="padding:8px;border:1px solid #bae6fd;">Department</th>
+                                <th style="padding:8px;border:1px solid #bae6fd;">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="approvedTeachersTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-title">View Reports</div>
+            <form action="/reports" method="get">
+                <button type="submit" class="btn">View Reports</button>
+            </form>
+        </div>
+    </div>
+    <script>
+    function loadPendingTeachers() {
+        fetch('/api/teachers/pending')
+            .then(res => res.json())
+            .then(teachers => {
+                const tbody = document.getElementById('teachersTableBody');
+                tbody.innerHTML = '';
+                teachers.forEach(teacher => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td style='border:1px solid #bae6fd;padding:8px;'>${teacher.name || ''}</td>
+                        <td style='border:1px solid #bae6fd;padding:8px;'>${teacher.email || ''}</td>
+                        <td style='border:1px solid #bae6fd;padding:8px;'>${teacher.department || ''}</td>
+                        <td style='border:1px solid #bae6fd;padding:8px;'>${teacher.status || ''}</td>
+                        <td style='border:1px solid #bae6fd;padding:8px;'>
+                            <button onclick="approveTeacher(${teacher.teacherId})" style='margin-right:8px;'>Approve</button>
+                            <button onclick="rejectTeacher(${teacher.teacherId})" style='background:#f87171;color:#fff;'>Reject</button>
+                        </td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            });
+    }
+    function loadApprovedTeachers() {
+        fetch('/api/teachers/approved')
+            .then(res => res.json())
+            .then(teachers => {
+                const tbody = document.getElementById('approvedTeachersTableBody');
+                tbody.innerHTML = '';
+                teachers.forEach(teacher => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td style='border:1px solid #bae6fd;padding:8px;'>${teacher.name || ''}</td>
+                        <td style='border:1px solid #bae6fd;padding:8px;'>${teacher.email || ''}</td>
+                        <td style='border:1px solid #bae6fd;padding:8px;'>${teacher.department || ''}</td>
+                        <td style='border:1px solid #bae6fd;padding:8px;'>${teacher.status || ''}</td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            });
+    }
+    function approveTeacher(id) {
+        fetch(`/admin/approve-teacher/${id}`, {method:'POST'})
+            .then(() => loadPendingTeachers());
+    }
+    function rejectTeacher(id) {
+        fetch(`/admin/reject-teacher/${id}`, {method:'POST'})
+            .then(() => loadPendingTeachers());
+    }
+    document.addEventListener('DOMContentLoaded', function() {
+        loadPendingTeachers();
+        document.getElementById('pendingTab').onclick = function() {
+            document.getElementById('pendingTeachersSection').style.display = '';
+            document.getElementById('approvedTeachersSection').style.display = 'none';
+            this.style.background = '';
+            this.style.color = '';
+            document.getElementById('approvedTab').style.background = '#e0e7ff';
+            document.getElementById('approvedTab').style.color = '#38bdf8';
+            loadPendingTeachers();
+        };
+        document.getElementById('approvedTab').onclick = function() {
+            document.getElementById('pendingTeachersSection').style.display = 'none';
+            document.getElementById('approvedTeachersSection').style.display = '';
+            this.style.background = '';
+            this.style.color = '';
+            document.getElementById('pendingTab').style.background = '#e0e7ff';
+            document.getElementById('pendingTab').style.color = '#38bdf8';
+            loadApprovedTeachers();
+        };
+    });
+    </script>
+</body>
+</html>

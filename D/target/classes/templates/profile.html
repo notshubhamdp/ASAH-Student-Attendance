@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile - Student Attendance System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(120deg, #bae6fd 0%, #e0e7ff 100%);
+            margin: 0;
+            min-height: 100vh;
+            position: relative;
+        }
+        .floating-shape {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.13;
+            z-index: 0;
+        }
+        .shape1 { width: 160px; height: 160px; background: #38bdf8; top: 30px; left: 30px; filter: blur(2px); }
+        .shape2 { width: 100px; height: 100px; background: #0ea5e9; bottom: 40px; right: 40px; filter: blur(2px); }
+        .header {
+            background: rgba(56,189,248,0.85);
+            color: #fff;
+            padding: 18px 0;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 24px rgba(56,189,248,0.10);
+            backdrop-filter: blur(4px);
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            background: rgba(255,255,255,0.85);
+            box-shadow: 0 2px 8px rgba(30,41,59,0.10);
+            padding: 10px 0;
+            position: relative;
+            z-index: 2;
+            border-radius: 0 0 32px 32px;
+            backdrop-filter: blur(2px);
+        }
+        .navbar a {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.08rem;
+            padding: 6px 18px;
+            border-radius: 6px;
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(56,189,248,0.08);
+        }
+        .navbar a:hover {
+            background: #bae6fd;
+            color: #0f172a;
+            box-shadow: 0 4px 16px rgba(56,189,248,0.18);
+        }
+        .container {
+            max-width: 480px;
+            margin: 48px auto;
+            background: rgba(255,255,255,0.82);
+            border-radius: 24px;
+            box-shadow: 0 12px 48px rgba(56,189,248,0.18);
+            padding: 44px 36px;
+            position: relative;
+            z-index: 1;
+            backdrop-filter: blur(8px);
+        }
+        h2 {
+            color: #38bdf8;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+        label {
+            color: #475569;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #cbd5e1;
+            font-size: 1.05rem;
+        }
+        .btn {
+            background: linear-gradient(90deg, #38bdf8 0%, #0ea5e9 100%);
+            color: #fff;
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(56,189,248,0.15);
+            transition: background 0.2s, transform 0.2s;
+        }
+        .btn:hover {
+            background: linear-gradient(90deg, #0ea5e9 0%, #38bdf8 100%);
+            transform: scale(1.05);
+        }
+        @media (max-width: 700px) {
+            .container { max-width: 98vw; padding: 18px 6px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-shape shape1"></div>
+    <div class="floating-shape shape2"></div>
+    <div class="header">Student Attendance System</div>
+    <div class="navbar">
+        <a href="/teacher_dashboard">Dashboard</a>
+        <a href="/profile">Profile</a>
+        <a href="/login">Logout</a>
+    </div>
+    <div class="container">
+        <h2>My Profile</h2>
+        <div class="profile-details">
+            <p><strong>First Name:</strong> <span th:text="${firstName}"></span></p>
+            <p><strong>Last Name:</strong> <span th:text="${lastName}"></span></p>
+            <p><strong>Email:</strong> <span th:text="${email}"></span></p>
+            <p><strong>Phone Number:</strong> <span th:text="${phone}"></span></p>
+            <p><strong>Department:</strong> <span th:text="${department}"></span></p>
+            <p><strong>Role:</strong> <span th:text="${role}"></span></p>
+            <p><strong>Registration Time:</strong> <span th:text="${createdAt}"></span></p>
+            <p><strong>Roll Number (if student):</strong> <span th:text="${rollNo}"></span></p>
+        </div>
+    </div>
+</body>
+</html>

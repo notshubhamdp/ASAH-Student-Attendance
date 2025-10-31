@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - Student Attendance System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Roboto', Arial, sans-serif; background: linear-gradient(120deg, #38bdf8 0%, #e0e7ff 100%); margin: 0; }
+        .container { max-width: 420px; margin: 70px auto; background: #fff; border-radius: 16px; box-shadow: 0 4px 18px rgba(30,41,59,0.10); padding: 40px 32px; }
+        h2 { text-align: center; color: #0f172a; margin-bottom: 28px; font-size: 2rem; font-weight: 700; }
+        form { display: flex; flex-direction: column; gap: 18px; }
+        label { color: #475569; font-weight: 500; margin-bottom: 6px; }
+        input[type="text"], input[type="email"], input[type="password"], select { padding: 12px; border-radius: 8px; border: 1px solid #cbd5e1; font-size: 1.05rem; }
+        .btn { background: linear-gradient(90deg, #38bdf8 0%, #0ea5e9 100%); color: #fff; padding: 14px; border: none; border-radius: 10px; font-weight: 700; font-size: 1.1rem; cursor: pointer; box-shadow: 0 2px 8px rgba(56,189,248,0.15); transition: background 0.2s, transform 0.2s; }
+        .btn:hover { background: linear-gradient(90deg, #0ea5e9 0%, #38bdf8 100%); transform: scale(1.04); }
+        .login-link { text-align: center; margin-top: 22px; color: #475569; }
+        .login-link a { color: #38bdf8; text-decoration: none; font-weight: 500; }
+        .login-link a:hover { text-decoration: underline; }
+        .icon { display: block; text-align: center; font-size: 2.5rem; color: #38bdf8; margin-bottom: 18px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">&#128100;</div>
+        <h2>Register</h2>
+    <form>
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" required pattern="[0-9]{10}" maxlength="10">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+            <div id="usernameMsg" style="margin-bottom:8px;font-size:0.98rem;"></div>
+            <label for="role">Role</label>
+            <select id="role" name="role" required>
+                <option value="">Select Role</option>
+                <option value="teacher">Teacher</option>
+                <option value="student">Student</option>
+            </select>
+            <label for="department">Department</label>
+            <select id="department" name="department" required>
+                <option value="">Select Department</option>
+                <option value="computer">Computer Engineering</option>
+                <option value="mechanical">Mechanical Engineering</option>
+                <option value="civil">Civil Engineering</option>
+                <option value="electrical">Electrical Engineering</option>
+            </select>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <div style="margin-top:8px;margin-bottom:8px;">
+                <div id="strengthBar" style="height:8px;width:0;background:#f87171;border-radius:4px;transition:width 0.3s;"></div>
+                <span id="strengthText" style="margin-left:8px;font-weight:500;color:#475569;">Weak</span>
+            </div>
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <button type="submit" class="btn">Register</button>
+            <div id="registerErrorMsg" style="color:#f87171;font-weight:500;margin-top:10px;"></div>
+        </form>
+        <div class="login-link">
+            <span>Already have an account?</span> <a href="/login">Login</a>
+        </div>
+    </div>
+    <script src="/js/register.js"></script>
+    <script>
+    // AJAX username uniqueness check
+    function checkUsernameUniqueAJAX() {
+        let usernameInput = document.getElementById('username');
+        let usernameMsg = document.getElementById('usernameMsg');
+        let username = usernameInput.value.trim();
+        if (username.length < 4) {
+            usernameMsg.textContent = 'Username too short';
+            usernameMsg.style.color = '#fbbf24';
+            return;
+        }
+        fetch('/api/check-username?username=' + encodeURIComponent(username))
+            .then(response => response.json())
+            .then(data => {
+                if (data.exists) {
+                    usernameMsg.textContent = 'Username already taken';
+                    usernameMsg.style.color = '#f87171';
+                } else {
+                    usernameMsg.textContent = 'Username available';
+                    usernameMsg.style.color = '#22c55e';
+                }
+            })
+            .catch(() => {
+                usernameMsg.textContent = 'Error checking username';
+                usernameMsg.style.color = '#f87171';
+            });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('username').addEventListener('input', function() {
+            checkUsernameUniqueAJAX();
+        });
+        document.getElementById('role').addEventListener('change', function() {
+            let role = this.value;
+            let deptDiv = document.getElementById('departmentDiv');
+            let adminInfo = document.getElementById('adminInfo');
+            if (role === 'student') {
+                deptDiv.style.display = 'block';
+                adminInfo.style.display = 'none';
+            } else if (role === 'admin') {
+                deptDiv.style.display = 'none';
+                adminInfo.style.display = 'block';
+            } else {
+                deptDiv.style.display = 'none';
+                adminInfo.style.display = 'none';
+            }
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form[action="/register"]');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let roleValue = document.getElementById('role').value;
+            let roleEnum = roleValue.toUpperCase();
+            let department = document.getElementById('department').value;
+            const data = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                username: document.getElementById('username').value,
+                role: roleEnum,
+                password: document.getElementById('password').value
+            };
+            if (roleValue === 'student') {
+                data.department = department;
+            }
+            fetch('/api/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            })
+            .then(res => res.json())
+            .then(result => {
+                alert(result.message);
+                if(result.message && result.message.includes('User registered successfully')) {
+                    window.location.href = '/login';
+                }
+            })
+            .catch(async (err) => {
+                let msg = 'Registration failed. Please try again.';
+                if (err && err.response) {
+                    try { msg = await err.response.text(); } catch {}
+                }
+                alert(msg);
+            });
+        });
+    });
+    </script>
+</body>
+</html>
