@@ -53,10 +53,21 @@
             transition: background 0.2s, color 0.2s, box-shadow 0.2s;
             box-shadow: 0 2px 8px rgba(56,189,248,0.08);
         }
-        .navbar a:hover {
+        .navbar a:hover, .navbar a.active {
             background: #bae6fd;
             color: #0f172a;
             box-shadow: 0 4px 16px rgba(56,189,248,0.18);
+        }
+        .profile-details p {
+            margin: 12px 0;
+            padding: 12px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.5);
+        }
+        .profile-details strong {
+            color: #0284c7;
+            display: inline-block;
+            width: 150px;
         }
         .container {
             max-width: 480px;
@@ -115,22 +126,24 @@
     <div class="floating-shape shape1"></div>
     <div class="floating-shape shape2"></div>
     <div class="header">Student Attendance System</div>
-    <div class="navbar">
-        <a href="/teacher_dashboard">Dashboard</a>
-        <a href="/profile">Profile</a>
-        <a href="/login">Logout</a>
+    <div class="navbar" th:with="role=${session.role}">
+        <a th:if="${role == 'STUDENT'}" href="/student_dashboard">Back to Dashboard</a>
+        <a th:if="${role == 'TEACHER'}" href="/teacher_dashboard">Back to Dashboard</a>
+        <a th:if="${role == 'ADMIN'}" href="/admin_dashboard">Back to Dashboard</a>
+        <a href="/profile" class="active">My Profile</a>
+        <a href="/profile/logout">Logout</a>
     </div>
     <div class="container">
         <h2>My Profile</h2>
         <div class="profile-details">
-            <p><strong>First Name:</strong> <span th:text="${firstName}"></span></p>
-            <p><strong>Last Name:</strong> <span th:text="${lastName}"></span></p>
-            <p><strong>Email:</strong> <span th:text="${email}"></span></p>
-            <p><strong>Phone Number:</strong> <span th:text="${phone}"></span></p>
-            <p><strong>Department:</strong> <span th:text="${department}"></span></p>
-            <p><strong>Role:</strong> <span th:text="${role}"></span></p>
-            <p><strong>Registration Time:</strong> <span th:text="${createdAt}"></span></p>
-            <p><strong>Roll Number (if student):</strong> <span th:text="${rollNo}"></span></p>
+            <p><strong>First Name:</strong> <span th:text="${firstName ?: 'Not provided'}"></span></p>
+            <p><strong>Last Name:</strong> <span th:text="${lastName ?: 'Not provided'}"></span></p>
+            <p><strong>Email:</strong> <span th:text="${email ?: 'Not provided'}"></span></p>
+            <p><strong>Phone Number:</strong> <span th:text="${phone ?: 'Not provided'}"></span></p>
+            <p><strong>Department:</strong> <span th:text="${department ?: 'Not provided'}"></span></p>
+            <p><strong>Role:</strong> <span th:text="${role ?: 'Not provided'}"></span></p>
+            <p><strong>Registration Time:</strong> <span th:text="${createdAt ?: 'Not recorded'}"></span></p>
+            <p th:if="${role == 'STUDENT'}"><strong>Roll Number:</strong> <span th:text="${rollNo ?: 'Not provided'}"></span></p>
         </div>
     </div>
 </body>
